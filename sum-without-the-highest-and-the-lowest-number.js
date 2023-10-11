@@ -19,9 +19,6 @@
 // Sum all numbers in the array
 
 function sumArrayWithoutHighestAndLowest(arr) {
-  //input validation
-  if (arr == null) return 0;
-
   /* 
     "..." this is the spread operator, it returns each     
     element in the array.
@@ -35,10 +32,12 @@ function sumArrayWithoutHighestAndLowest(arr) {
      let newArray = filteredArray.reduce((acc, curr) => acc + curr, 0);
      return newArray;
 */
-  return arr
-    .sort((a, b) => a - b) //sorting ascending order
-    .slice(1, -1) //removing min and max number
-    .reduce((acc, curr) => acc + curr, 0); //Adding the rest element of the array
+  return arr == null
+    ? 0
+    : arr
+        .sort((a, b) => a - b) //sorting ascending order
+        .slice(1, -1) //removing min and max number
+        .reduce((acc, curr) => acc + curr, 0); //Adding the rest element of the array
 }
 
 console.log(sumArrayWithoutHighestAndLowest([1, 1, 2, 3, 10]));

@@ -20,6 +20,13 @@
     function countSheeps(arrayOfSheeps) {
         return arrayOfSheeps.filter(Boolean).length;
     }
+
+    or
+    let counter = 0;
+    arr.map((m)=>{
+        if (m === true) counter++;
+    });
+    return counter;
 */
 
 function countSheep(sheepArr) {
