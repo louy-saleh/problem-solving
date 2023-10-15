@@ -1,10 +1,14 @@
-function smash(words) {
-  // Remove any leading or trailing whitespace from the words in the array.
-  words = words.map((word) => word.trim());
+/*
+  Write a function that takes an array of words and smashes
+  them together into a sentence and returns the sentence. 
+  You can ignore any need to sanitize words or add punctuation, 
+  but you should add spaces between each word. 
+  Be careful, there shouldn't be a space at the beginning 
+  or the end of the sentence!
 
-  // Join the words in the array into a single string, with a space between each word.
-  const sentence = words.join(" ");
+  ? Example
+  ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+*/
+var smash = (words) => words.join(" ");
 
-  // Return the sentence.
-  return sentence;
-}
+console.log(smash(["hello", "world", "this", "is", "great"]));
